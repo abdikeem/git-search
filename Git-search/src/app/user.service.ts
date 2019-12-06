@@ -18,7 +18,8 @@ private clientsecret:'';
     this.username = 'abdikeem';
   }
   
-  getuserInfor(){
-    return this.http.get("https://api.github.com/users/" + this.username);
+  getUserInfor(){
+    return this.http.get("https://api.github.com/users/" + this.username)
+    .map(res => res.json());
   }
 }
