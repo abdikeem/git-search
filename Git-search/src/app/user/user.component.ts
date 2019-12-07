@@ -8,9 +8,12 @@ import { UserService } from '../user.service';
 })
 export class UserComponent implements OnInit {
 
+   user:any;
+
   constructor(private userservice:UserService) { 
     this.userservice.getUserInfor().subscribe(user =>{
-      console.log(user)
+      console.log(user);
+      this.user = user;
     })
   }
 

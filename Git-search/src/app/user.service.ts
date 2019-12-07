@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers} from '@angular/http';
-import 'rxjs/add/operator/map'; 
+import { HttpClient} from '@angular/common/http';
+import 'rxjs/add/operator/map';
 
 @Injectable({
   providedIn: 'root'
@@ -13,13 +13,13 @@ private clientsecret:'';
 //clientid and clientsecret are optional even if there are not used one can still fetch the data from github but with limited number of times// 
 
 
-  constructor(http:Http) { 
+  constructor(private http:HttpClient) { 
     console.log("service is know ready!");
     this.username = 'abdikeem';
   }
   
   getUserInfor(){
     return this.http.get("https://api.github.com/users/" + this.username)
-    .map(res => res.json());
+    // .pipe(map(res => res.json()));
   }
 }
