@@ -17,6 +17,16 @@
                  <li class="list-item" *ngIf='user.emial'><a href="{{user.email}}">{{user.email}}</a></li>
              </ul>
          </div>
+         <div class="col-md-4">
+            <p>
+                <span class="btn btn-info">{{user.followers}} Followers</span>&nbsp;
+                <span class="btn btn-warning">Following {{user.following}}</span>&nbsp;
+                <span class="btn btn-danger">{{user.public_gists}} public_gists</span>&nbsp;
+                <span class="btn btn-success">{{user.public_repos}} public_repos</span>
+            </p>
+
+        <p><a href="{{user.html_url}}" class="btn btn-success btn-sm">View users Github </a></p>
+         </div>
      </div>
  </div>
 </div>
