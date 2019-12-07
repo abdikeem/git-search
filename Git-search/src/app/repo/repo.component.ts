@@ -10,7 +10,7 @@ export class RepoComponent implements OnInit {
   repoitems: any[];
   repoName:string= "akan";
 
-  constructor(private profileService: UserService) { 
+  constructor(private UserService: UserService) { 
     
   }
 
