@@ -7,7 +7,15 @@
  <div class="panel panel-body">
      <div class="row">
          <div class="col-md-3">
-             <img src="{{user.avatar_url}}" class="img-circle img-reponsive" alt="Profile Image">
+             <img src="{{user.avatar_url}}" alt="Profile Image">
+         </div>
+         <div class="col-md-5">
+             <ul class="list">
+                 <li class="list-item" *ngIf='user.bio'>{{user.bio}}</li>
+                 <li class="list-item" *ngIf='user.hireable'>Available for Hire</li>
+                 <li class="list-item" *ngIf='user.blog'><a href="{{user.blog}}">{{user.blog}}</a></li>
+                 <li class="list-item" *ngIf='user.emial'><a href="{{user.email}}">{{user.email}}</a></li>
+             </ul>
          </div>
      </div>
  </div>
