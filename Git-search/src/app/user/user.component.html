@@ -39,7 +39,7 @@
         <div class="panel-body" *ngFor='let repo of userrepos'>
 
                 <h3>{{repo.name}}</h3>
-                <p>Created: {{repo.created_at | dateAgo}}</p>
+                <!-- <p>Created: {{repo.created_at | dateAgo}}</p> -->
                 <p>Language Used: {{repo.language}}</p>
                 <p>{{repo.description}}</p>
                 <span><a href="{{repo.html_url}}" class="btn btn-warning pull-right">View repos</a></span>
