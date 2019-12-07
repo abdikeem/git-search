@@ -8,11 +8,13 @@ import { UserService } from './user.service';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
+import { RepoComponent } from './repo/repo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
+    RepoComponent,
     
   ],
   imports: [
