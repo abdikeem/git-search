@@ -9,11 +9,15 @@ import { UserService } from '../user.service';
 export class UserComponent implements OnInit {
 
    user:any;
-
+   repos:any;
   constructor(private userservice:UserService) { 
     this.userservice.getUserInfor().subscribe(user =>{
       console.log(user);
       this.user = user;
+    })
+    this.userservice.getUserRepos().subscribe(repos =>{
+      console.log(repos);
+      this.repos = repos;
     })
   }
 

@@ -22,4 +22,7 @@ private clientsecret:'';
     return this.http.get("https://api.github.com/users/" + this.username)
     // .pipe(map(res => res.json()));
   }
+  getUserRepos(){
+    return this.http.get("https://api.github.com/users/" + this.username + "/repos")
+  }
 }
