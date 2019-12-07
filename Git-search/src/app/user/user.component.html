@@ -1,5 +1,14 @@
 <div *ngIf='user'>
  <div class="panel panel-default">
      {{user.name}} <small>({{user.login }})</small>
+     <span *ngIf='user.company'>working at {{user.company}}</span>
+     <span *ngIf='user.location'>{{user.location}}</span>
+ </div>
+ <div class="panel panel-body">
+     <div class="row">
+         <div class="col-md-3">
+             <img src="{{user.avatar_url}}" class="img-circle img-reponsive" alt="Profile Image">
+         </div>
+     </div>
  </div>
 </div>
