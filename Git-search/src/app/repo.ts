@@ -4,19 +4,21 @@ import { HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+
+export class Repo {
 
 private username:string;
 
-  constructor(private http:HttpClient) { 
+ constructor(private http:HttpClient) { 
     console.log("service is know ready!");
     this.username = 'abdikeem';
   }
-    
-  getUserInfor(){
-    return this.http.get("https://api.github.com/users/" + this.username)
-  }
   
+
+    getUserRepos(){
+        return this.http.get("https://api.github.com/users/" + this.username + "/repos")
+      }
+
   updateuserinfo(username:string){
     return this.username = username;
   }
