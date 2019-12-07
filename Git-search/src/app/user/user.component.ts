@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
-// import { Repo } from '../repo'
 
 @Component({
   selector: 'app-user',
@@ -11,7 +10,7 @@ export class UserComponent implements OnInit {
 
    user:any;
    repo:any;
-   username:string;
+   username:string = 'abdikeem'
 
   constructor(private userservice:UserService) { 
    

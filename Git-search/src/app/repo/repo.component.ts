@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { UserService } from '../user.service';
 @Component({
   selector: 'app-repo',
   templateUrl: './repo.component.html',
@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepoComponent implements OnInit {
 
-  constructor() { }
+  repoitems: any[];
+  repoName:string= "akan";
+
+  constructor(private profileService: UserService) { 
+    
+  }
+
+  findRepo () {
+    this.profileService.UpdateRepo(this.repoName);
+    this.profileService.searchrepos().subscribe(repo => {
+      this.repoitems = repo["items"];
+      console.log(this.repoitems);
+    })
+  }
 
   ngOnInit() {
+    this.findRepo()
   }
 
 }
+
