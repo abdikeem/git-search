@@ -10,7 +10,15 @@ export class UserComponent implements OnInit {
 
    user:any;
    repos:any;
+   username:string;
+
   constructor(private userservice:UserService) { 
+   
+  }
+
+  finduserinfo(){
+    this.userservice.updateuserinfo(this.username)
+
     this.userservice.getUserInfor().subscribe(user =>{
       console.log(user);
       this.user = user;

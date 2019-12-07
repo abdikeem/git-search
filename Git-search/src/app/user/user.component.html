@@ -1,6 +1,6 @@
 <form class="search-form">
     <div class="forn-group">
-        <input type="text" placeholder="GitHub username..">
+        <input type="text" placeholder="GitHub username.." [(ngModel)]="username" name="username" (keyup)="finduserinfo()">
     </div>
 </form>
 
