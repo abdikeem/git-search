@@ -9,7 +9,7 @@ export class UserService {
 private username:string;
 
   constructor(private http:HttpClient) { 
-    console.log("service is know ready!");
+    console.log();
     this.username = 'abdikeem';
   }
   
