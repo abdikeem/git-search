@@ -12,11 +12,13 @@ private username:string;
     console.log("service is know ready!");
     this.username = 'abdikeem';
   }
-    
+  
   getUserInfor(){
     return this.http.get("https://api.github.com/users/" + this.username)
   }
-  
+  getUserRepos(){
+    return this.http.get("https://api.github.com/users/" + this.username + "/repos")
+  }
   updateuserinfo(username:string){
     return this.username = username;
   }

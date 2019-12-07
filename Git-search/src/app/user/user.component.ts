@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
-import { Repo } from '../repo'
+// import { Repo } from '../repo'
 
 @Component({
   selector: 'app-user',
@@ -18,14 +18,12 @@ export class UserComponent implements OnInit {
   }
 
   finduserinfo(){
-    this.repo.updateuserinfo(this.username)
     this.userservice.updateuserinfo(this.username)
 
     this.userservice.getUserInfor().subscribe(user =>{
       console.log(user);
       this.user = user;
     })
-
     this.repo.getUserRepo().subscribe(repos =>{
       console.log(repos);
       this.repo = repos;
