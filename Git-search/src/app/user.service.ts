@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
-import { environment } from '../environments/environment';
+// import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 export class UserService {
 
  username:string;
- apikey:string;
+ apikey:string;'0186cdffd0ed8545850fe1d9131fb06a6ce245eb'//token
  repoName:string;
 
 

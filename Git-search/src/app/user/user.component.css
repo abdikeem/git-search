@@ -4,8 +4,8 @@
 }
 h1{
     text-align: center;
-    font-family: 'Fredericka the Great', cursive;
-    color: rgba(14, 124, 226, 0.938);
+    font-family: 'Rye', cursive;
+    font-family: 'Nosifer', cursive;
 }
 #image{
     border-radius: 100%;
@@ -26,9 +26,12 @@ ul{
     font-family: 'Fredericka the Great', cursive;
     color: rgba(31, 13, 194, 0.938);
 }
-#btn{
-    font-family: 'Rye', cursive;
-}
+
 #details{
-    font-family: 'Rye', cursive;
+    ont-family: 'Fredericka the Great', cursive;
+    color: yellowgreen;
+}
+.user{
+    font-family: 'Fredericka the Great', cursive;
+    color: aqua;
 }
