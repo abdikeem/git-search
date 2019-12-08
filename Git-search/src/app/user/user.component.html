@@ -1,27 +1,33 @@
 <form class="search-form">
-    <div class="form-group">
-        <input type="text" placeholder="GitHub username.." [(ngModel)]="username" name="username" (keyup)="finduserinfo()">
-    </div>
+        <div class="container-fluid">
+                <div class="navbar bg-secondary">
+                  <div>
+                    <h1>GITHUB SEARCH...</h1>
+                  </div>
+                     <input type="text" placeholder="GitHub username.." [(ngModel)]="username" name="username" (keyup)="finduserinfo()">
+                      <!-- <a class="nav-item nav-link active btn btn-light" routerLink="profile">Search User<span class="sr-only">(current)</span></a> -->
+                      <a class="nav-item nav-link btn btn-light" routerLink="/repos"> Search Repos</a>
+                </div>
+        </div>
 </form>
 
 <div *ngIf='user'>
  <div class="panel panel-default">
-     <h1><strong>GitHub Search..</strong></h1>
-     {{user.name}} <small >({{user.login }})</small>
+    Name: {{user.name}}<br> Username: ({{user.login }})
      <span *ngIf='user.company'>working at {{user.company}}</span>
      <span *ngIf='user.location'>{{user.location}}</span>
  </div>
  <div class="panel panel-body">
      <div class="row">
          <div class="col-md-3">
-             <img src="{{user.avatar_url}}" alt="Profile Image">
+             <img src="{{user.avatar_url}}" alt="Profile Image" class="image">
          </div>
          <div class="col-md-5">
              <ul class="list">
-                 <li class="list-item" *ngIf='user.bio'>{{user.bio}}</li>
-                 <li class="list-item" *ngIf='user.hireable'>Available for Hire</li>
-                 <li class="list-item" *ngIf='user.blog'><a href="{{user.blog}}">{{user.blog}}</a></li>
-                 <li class="list-item" *ngIf='user.emial'><a href="{{user.email}}">{{user.email}}</a></li>
+                 <ul class="list-item" *ngIf='user.bio'>Bios:{{user.bio}}</ul>
+                 <ul class="list-item" *ngIf='user.hireable'>Available for Hire</ul>
+                 <ul class="list-item" *ngIf='user.blog'><a href="{{user.blog}}">{{user.blog}}</a></ul>
+                 <ul class="list-item" *ngIf='user.emial'><a href="{{user.email}}">{{user.email}}</a></ul>
              </ul>
          </div>
          <div class="col-md-4">
@@ -29,22 +35,11 @@
                 <span class="btn btn-info">{{user.followers}} Followers</span>&nbsp;
                 <span class="btn btn-warning">Following {{user.following}}</span>&nbsp;
                 <span class="btn btn-danger">{{user.public_gists}} public_gists</span>&nbsp;
-                <span class="btn btn-success">{{user.public_repos}} public_repos</span>
+                <span class="btn btn-success"><a href="{{repos_url}}"></a>{{user.public_repos}} public_repos</span>
             </p>
 
         <p><a href="{{user.html_url}}" class="btn btn-success btn-sm">View users Github </a></p>
 
-        <div class="panel panel-default">
-            <h3>Repos</h3>
-        </div>
-        <div class="panel-body" *ngFor='let repo of userrepos'>
-
-                <h3>{{repo.name}}</h3>
-                <p>Created: {{repo.created_at | dateAgo}}</p>
-                <p>Language Used: {{repo.language}}</p>
-                <p>{{repo.description}}</p>
-                <span><a href="{{repo.html_url}}" class="btn btn-warning pull-right">View repos</a></span>
-        </div>
          </div>
      </div>
  </div>
