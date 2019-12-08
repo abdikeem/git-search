@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { UserService } from './user.service';
-
+import { DateCountPipe } from './date-count-pipe'
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
@@ -15,6 +15,7 @@ import { RepoComponent } from './repo/repo.component';
     AppComponent,
     UserComponent,
     RepoComponent,
+    DateCountPipe
     
   ],
   imports: [
