@@ -5,42 +5,56 @@
                     <h1>GITHUB SEARCH...</h1>
                   </div>
                      <input type="text" placeholder="GitHub username.." [(ngModel)]="username" name="username" (keyup)="finduserinfo()">
-                      <!-- <a class="nav-item nav-link active btn btn-light" routerLink="profile">Search User<span class="sr-only">(current)</span></a> -->
-                      <a class="nav-item nav-link btn btn-light" routerLink="/repos"> Search Repos</a>
                 </div>
         </div>
 </form>
 
-<div *ngIf='user'>
- <div class="panel panel-default">
-    Name: {{user.name}}<br> Username: ({{user.login }})
-     <span *ngIf='user.company'>working at {{user.company}}</span>
-     <span *ngIf='user.location'>{{user.location}}</span>
- </div>
- <div class="panel panel-body">
-     <div class="row">
-         <div class="col-md-3">
-             <img src="{{user.avatar_url}}" alt="Profile Image" class="image">
-         </div>
-         <div class="col-md-5">
-             <ul class="list">
-                 <ul class="list-item" *ngIf='user.bio'>Bios:{{user.bio}}</ul>
-                 <ul class="list-item" *ngIf='user.hireable'>Available for Hire</ul>
-                 <ul class="list-item" *ngIf='user.blog'><a href="{{user.blog}}">{{user.blog}}</a></ul>
-                 <ul class="list-item" *ngIf='user.emial'><a href="{{user.email}}">{{user.email}}</a></ul>
-             </ul>
-         </div>
-         <div class="col-md-4">
-            <p>
-                <span class="btn btn-info">{{user.followers}} Followers</span>&nbsp;
-                <span class="btn btn-warning">Following {{user.following}}</span>&nbsp;
-                <span class="btn btn-danger">{{user.public_gists}} public_gists</span>&nbsp;
-                <span class="btn btn-success"><a href="{{repos_url}}"></a>{{user.public_repos}} public_repos</span>
-            </p>
-
-        <p><a href="{{user.html_url}}" class="btn btn-success btn-sm">View users Github </a></p>
-
-         </div>
-     </div>
- </div>
-</div>
+<div *ngIf="user" class="container">
+        <div class="card bg-light">
+            <div class="card-header">
+                Username: {{user.login}}
+            </div>
+    
+            <div class="card-body">
+                <div class="row">
+                    <div class='col-sm-2' id="image">
+                        <img [src]='user.avatar_url' [title]='user.name'>
+                    </div><br>
+    
+                    <div class="col-sm-12">
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Username: </strong> {{user.login}}</li>
+                            <li class="list-group-item"><strong>Name: </strong> {{user.name}}</li>
+                            <li class="list-group-item"><strong>Email: </strong> {{user.email}}</li>
+                            <li class="list-group-item"><strong>Location: </strong> {{user.location}}</li>
+                            <li class="list-group-item"><strong>Created: </strong> {{user.created_at | dateAgo}}</li>
+                        </ul><br>
+    
+                        <div class="stats">
+                            <span class="btn btn-warning">{{user.followers}} Followers</span>&nbsp;
+                            <span class="btn btn-primary">Following {{user.following}}</span>&nbsp;
+                            <span class="btn btn-success">{{user.public_repos}} Public Repos</span>&nbsp;
+                            <span class="btn btn-info">{{user.public_gists}} Public Gists</span>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card bg-light" *ngIf="user.public_repos">
+            <div class="card-header">
+                <h2>Repos</h2>
+            </div>
+            <div class="card-body " *ngFor="let repo of userRepos">
+                <div class="card row">
+                    <div class="card-body">
+                        <h3>{{repo.name}}</h3>
+                        <p>Created: {{repo.created_at | dateAgo}}</p>
+                        <p>Language Used: {{repo.language}}</p>
+                        <p>{{repo.description}}</p>
+                        <span><a href="{{repo.html_url}}" target="_blank" class="btn btn-success">View Project</a></span>
+            </div>
+        </div>
+    </div>
+    

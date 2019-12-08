@@ -8,7 +8,7 @@ import { UserService } from '../user.service';
 export class RepoComponent implements OnInit {
 
   repoitems: any[];
-  repoName:string= "akan";
+  repoName:string= "week-4";
 
   constructor(private UserService: UserService) { 
     
