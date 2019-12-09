@@ -23,8 +23,11 @@ export class UserComponent implements OnInit {
       console.log(user);
       this.user = user;
     })
+    this.userservice.getUserRepos().subscribe(repo =>{
+      console.log(repo);
+      this.repo = repo;
+    })
   }
-
   ngOnInit() {
   }
 
