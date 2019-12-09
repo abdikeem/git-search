@@ -5,6 +5,9 @@ Abdihakim Abdirahman
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
+## Description
+This project enables the user to search github username and see users profile,repository,date at which the repo was created,view github direct from the source.
+
 ## Technologies used
 1.Nodejs 2.Angularjs 3.Bootstrap
 
