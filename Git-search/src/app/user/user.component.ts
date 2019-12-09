@@ -9,7 +9,7 @@ import { UserService } from '../user.service';
 export class UserComponent implements OnInit {
 
    user:any;
-   repo:any;
+   rep:any;
    username:string = 'abdikeem'
 
   constructor(private userservice:UserService) { 
@@ -25,7 +25,7 @@ export class UserComponent implements OnInit {
     })
     this.userservice.getUserRepos().subscribe(repo =>{
       console.log(repo);
-      this.repo = repo;
+      this.rep = repo;
     })
   }
   ngOnInit() {

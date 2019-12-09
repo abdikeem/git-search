@@ -8,6 +8,7 @@ import { DateCountPipe } from './date-count-pipe'
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
+import { RepoComponent } from './repo/repo.component';
 // import { RepoComponent } from './repo/repo.component';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { UserComponent } from './user/user.component';
     AppComponent,
     UserComponent,
     // RepoComponent,
-    DateCountPipe
+    DateCountPipe,
+    RepoComponent
     
   ],
   imports: [
