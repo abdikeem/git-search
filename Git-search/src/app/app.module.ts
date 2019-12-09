@@ -8,16 +8,15 @@ import { DateCountPipe } from './date-count-pipe'
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
-// import { RepoComponent } from './repo/repo.component';
-// import { RepoComponent } from './repo/repo.component';
+import { HighlightDirective } from '../app/highlight.directive'
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    // RepoComponent,
     DateCountPipe,
-    // RepoComponent
+    HighlightDirective
+    
     
   ],
   imports: [
