@@ -1,6 +1,15 @@
+# Author
+Abdihakim Abdirahman
+
 # GitSearch
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+
+## Technologies used
+1.Nodejs 2.Angularjs 3.Bootstrap
+
+## Setup
+Open terminal and run: 1.ng new Git-search to create angular project 2.cd Git-search 3.ng serve --open to open the project on our browser
 
 ## Development server
 
@@ -25,3 +34,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+### contacts
+Tel:0208000360 Email:abdihakimabdirahman21@gmail.com
+
+### live link
+https://abdikeem.github.io/git-search/
+
+
+#### license & copy-right
+MIT Copyright(c)2019
