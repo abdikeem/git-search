@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 export class UserService {
 
  username:string;
- apikey:string;'0186cdffd0ed8545850fe1d9131fb06a6ce245eb'//token
+ apikey:string;
  repoName:string;
 
 
