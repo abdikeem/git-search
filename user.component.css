@@ -1,0 +1,30 @@
+.search-form{
+    /* padding-top: 100px;   */
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-family: 'Rye', cursive;
+    font-family: 'Nosifer', cursive;
+}
+#image{
+    border-radius: 100%;
+}
+
+ul{
+    font-family: 'Rye', cursive;
+    color: aqua;
+}
+#repos{
+    font-family: 'Fredericka the Great', cursive;
+    color: rgba(31, 13, 194, 0.938);
+}
+
+#details{
+    font-family: 'Fredericka the Great', cursive;
+    color: yellowgreen;
+}
+.user{
+    font-family: 'Fredericka the Great', cursive;
+    color: aqua;
+}
