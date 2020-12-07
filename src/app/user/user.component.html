@@ -14,14 +14,13 @@
             <div class="card-header">
                <p class="user"> Username: {{user.login}}</p>
             </div>
-    
             <div class="card-body">
                 <div class="row">
                     <div class='col-md-2' id="image">
                         <img [src]='user.avatar_url' [title]='user.name'>
                     </div><br>
     
-                    <div class="col-md-12">
+                    <div class="col-md-10">
                         <ul class="list-group" id="details">
                             <li class="list-group-item"><strong>Username: </strong> {{user.login}}</li>
                             <li class="list-group-item"><strong>Name: </strong> {{user.name}}</li>
