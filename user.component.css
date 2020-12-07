@@ -8,8 +8,7 @@ h1{
     font-family: 'Nosifer', cursive;
 }
 #image{
-    max-width: 100%; 
-    height: auto;
+    border-radius: 100%;
 }
 
 ul{
